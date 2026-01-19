@@ -163,17 +163,20 @@ export function WorkflowSection() {
                     {/* Hover glow effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                    {/* Step number badge */}
-                    <div className={`inline-flex items-center gap-2 mb-4 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
-                      <span className="text-sm font-bold text-accent">
-                        0{index + 1}
-                      </span>
-                      <div className="w-8 h-px bg-gradient-to-r from-accent to-secondary" />
-                    </div>
+                    {/* Top row: Icon + Step number badge */}
+                    <div className={`flex items-center gap-4 mb-5 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+                      {/* Icon */}
+                      <div className="icon-glow w-12 h-12 rounded-xl text-accent flex items-center justify-center group-hover:text-white flex-shrink-0">
+                        {stepIcons[key]}
+                      </div>
 
-                    {/* Icon */}
-                    <div className="icon-glow w-12 h-12 rounded-xl text-accent flex items-center justify-center mb-4 group-hover:text-white">
-                      {stepIcons[key]}
+                      {/* Step number badge */}
+                      <div className={`flex items-center gap-2 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+                        <span className="text-sm font-bold text-accent">
+                          0{index + 1}
+                        </span>
+                        <div className="w-8 h-px bg-gradient-to-r from-accent to-secondary" />
+                      </div>
                     </div>
 
                     <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-3 tracking-tight relative">
