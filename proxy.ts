@@ -1,10 +1,10 @@
-import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 
 const locales = ["nl", "en"];
 const defaultLocale = "nl";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check if pathname already has a locale
@@ -24,7 +24,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Match all paths except static files and API
     "/((?!api|_next|_vercel|favicon.ico|.*\\.[\\w]+$).*)",
   ],
 };
