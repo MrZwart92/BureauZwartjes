@@ -5,10 +5,13 @@ export default createMiddleware(routing);
 
 export const config = {
   matcher: [
-    // Match all pathnames except for
-    // - API routes
-    // - Static files
-    // - Next.js internals
-    "/((?!api|_next|_vercel|.*\\..*).*)",
+    // Match all pathnames except:
+    // - API routes (/api/...)
+    // - Next.js internals (/_next/...)
+    // - Vercel internals (/_vercel/...)
+    // - Static files with extensions (.ico, .png, .jpg, etc.)
+    "/((?!api|_next|_vercel|favicon.ico|.*\\.[\\w]+$).*)",
+    // Always match root
+    "/",
   ],
 };
