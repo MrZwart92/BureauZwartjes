@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "title": "Bureau Zwartjes | Professionele Websites voor MKB",
+    "description": "Geen gedoe, wel resultaat. Professionele websites voor ondernemers die willen groeien. €1499 eenmalig + €49/maand."
+  },
+  "header": {
+    "logo": "Bureau Zwartjes",
+    "login": "Inloggen"
+  },
+  "hero": {
+    "title": "Jouw website,",
+    "titleHighlight": "zonder gedoe.",
+    "subtitle": "Professionele websites voor ondernemers die willen groeien. Vindbaar, veilig en volledig beheerd.",
+    "cta": "Start Intake",
+    "scroll": "Scroll voor meer"
+  },
+  "mission": {
+    "title": "Geen gedoe, wel resultaat",
+    "description": "Als ondernemer heb je wel wat beters te doen dan je zorgen maken over je website. Wij regelen alles: van ontwerp tot hosting, van SEO tot beveiliging. Jij focust op je klanten, wij op je online zichtbaarheid."
+  },
+  "usps": {
+    "title": "Drie pijlers van succes",
+    "items": {
+      "professional": {
+        "title": "Professionaliteit",
+        "description": "Een website die vertrouwen wekt. Modern design, snelle laadtijden en perfect werkend op elk apparaat."
+      },
+      "findable": {
+        "title": "Vindbaarheid",
+        "description": "Gevonden worden in Google. SEO-geoptimaliseerd, lokaal vindbaar en klaar voor je doelgroep."
+      },
+      "secure": {
+        "title": "Veiligheid",
+        "description": "SSL-certificaat, dagelijkse backups en continue monitoring. Je data is veilig bij ons."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Transparante prijzen",
+    "subtitle": "Geen verrassingen, geen kleine lettertjes",
+    "build": {
+      "label": "Eenmalig",
+      "price": "€1.499",
+      "description": "Volledig maatwerk website",
+      "features": [
+        "Persoonlijk intakegesprek",
+        "Custom design op maat",
+        "Responsive voor alle apparaten",
+        "SEO-geoptimaliseerd",
+        "Contact- en offerteformulieren",
+        "Google Analytics integratie"
+      ]
+    },
+    "service": {
+      "label": "Per maand",
+      "price": "€49",
+      "description": "Zorgeloos beheer",
+      "features": [
+        "Hosting op snelle servers",
+        "SSL-certificaat",
+        "Dagelijkse backups",
+        "Beveiligingsupdates",
+        "24-uurs support",
+        "Kleine aanpassingen inclusief"
+      ]
+    },
+    "paymentPlan": "Liever in termijnen? Dat kan ook.",
+    "cta": "Start Intake"
+  },
+  "workflow": {
+    "title": "Hoe werkt het?",
+    "subtitle": "Van eerste contact tot live in 5 stappen",
+    "steps": {
+      "chat": {
+        "title": "Intake",
+        "description": "Vertel ons over je bedrijf via onze slimme intake chat. Wij stellen de juiste vragen."
+      },
+      "plan": {
+        "title": "Plan",
+        "description": "Je ontvangt een gedetailleerd voorstel met design concepten en een heldere planning."
+      },
+      "build": {
+        "title": "Bouw",
+        "description": "Wij bouwen je website met aandacht voor elk detail. Je krijgt tussentijdse updates."
+      },
+      "live": {
+        "title": "Live",
+        "description": "Na je goedkeuring gaat je website live. Wij regelen alles: domein, hosting, SSL."
+      },
+      "service": {
+        "title": "Service",
+        "description": "Wij beheren je website. Updates, backups, beveiliging - jij hoeft nergens aan te denken."
+      }
+    }
+  },
+  "promise": {
+    "title": "Onze belofte",
+    "items": {
+      "ownership": {
+        "title": "100% eigendom",
+        "description": "De website is van jou. Alle code, alle content, alles."
+      },
+      "response": {
+        "title": "24 uur reactietijd",
+        "description": "Op werkdagen reageren wij binnen 24 uur op je vragen."
+      },
+      "simple": {
+        "title": "Geen complex gedoe",
+        "description": "Wij praten in normale taal, geen technisch jargon."
+      }
+    }
+  },
+  "footer": {
+    "cta": "Klaar om te beginnen?",
+    "ctaButton": "Start Intake",
+    "copyright": "© {year} Bureau Zwartjes. Alle rechten voorbehouden.",
+    "links": {
+      "privacy": "Privacy",
+      "terms": "Voorwaarden",
+      "contact": "Contact"
+    }
+  },
+  "chat": {
+    "title": "Start je intake",
+    "placeholder": "Typ je antwoord...",
+    "send": "Verstuur",
+    "close": "Sluiten",
+    "typing": "Bureau Zwartjes denkt na...",
+    "welcome": "Hallo! Ik ben de virtuele assistent van Bureau Zwartjes. Ik help je graag met het opstellen van een plan voor je nieuwe website. Laten we beginnen: wat is de naam van je bedrijf?",
+    "complete": {
+      "title": "Bedankt!",
+      "description": "We hebben alle informatie ontvangen. Je ontvangt binnen 24 uur een persoonlijk voorstel op je e-mailadres.",
+      "cta": "Sluit venster"
+    }
+  },
+  "theme": {
+    "light": "Licht",
+    "dark": "Donker",
+    "toggle": "Thema wisselen"
+  },
+  "language": {
+    "switch": "Taal wisselen",
+    "nl": "Nederlands",
+    "en": "English"
+  }
+}

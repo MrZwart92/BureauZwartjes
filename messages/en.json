@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "title": "Bureau Zwartjes | Professional Websites for SME",
+    "description": "No hassle, just results. Professional websites for entrepreneurs who want to grow. €1499 one-time + €49/month."
+  },
+  "header": {
+    "logo": "Bureau Zwartjes",
+    "login": "Login"
+  },
+  "hero": {
+    "title": "Your website,",
+    "titleHighlight": "hassle-free.",
+    "subtitle": "Professional websites for entrepreneurs who want to grow. Findable, secure and fully managed.",
+    "cta": "Start Intake",
+    "scroll": "Scroll for more"
+  },
+  "mission": {
+    "title": "No hassle, just results",
+    "description": "As an entrepreneur, you have better things to do than worry about your website. We handle everything: from design to hosting, from SEO to security. You focus on your customers, we focus on your online visibility."
+  },
+  "usps": {
+    "title": "Three pillars of success",
+    "items": {
+      "professional": {
+        "title": "Professionalism",
+        "description": "A website that builds trust. Modern design, fast loading times and perfectly functional on every device."
+      },
+      "findable": {
+        "title": "Findability",
+        "description": "Be found on Google. SEO-optimized, locally visible and ready for your target audience."
+      },
+      "secure": {
+        "title": "Security",
+        "description": "SSL certificate, daily backups and continuous monitoring. Your data is safe with us."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Transparent pricing",
+    "subtitle": "No surprises, no fine print",
+    "build": {
+      "label": "One-time",
+      "price": "€1,499",
+      "description": "Fully custom website",
+      "features": [
+        "Personal intake meeting",
+        "Custom tailored design",
+        "Responsive for all devices",
+        "SEO-optimized",
+        "Contact and quote forms",
+        "Google Analytics integration"
+      ]
+    },
+    "service": {
+      "label": "Per month",
+      "price": "€49",
+      "description": "Worry-free management",
+      "features": [
+        "Hosting on fast servers",
+        "SSL certificate",
+        "Daily backups",
+        "Security updates",
+        "24-hour support",
+        "Minor adjustments included"
+      ]
+    },
+    "paymentPlan": "Prefer to pay in installments? That's possible too.",
+    "cta": "Start Intake"
+  },
+  "workflow": {
+    "title": "How does it work?",
+    "subtitle": "From first contact to live in 5 steps",
+    "steps": {
+      "chat": {
+        "title": "Intake",
+        "description": "Tell us about your business through our smart intake chat. We ask the right questions."
+      },
+      "plan": {
+        "title": "Plan",
+        "description": "You receive a detailed proposal with design concepts and a clear timeline."
+      },
+      "build": {
+        "title": "Build",
+        "description": "We build your website with attention to every detail. You get regular updates."
+      },
+      "live": {
+        "title": "Live",
+        "description": "After your approval, your website goes live. We handle everything: domain, hosting, SSL."
+      },
+      "service": {
+        "title": "Service",
+        "description": "We manage your website. Updates, backups, security - you don't have to think about anything."
+      }
+    }
+  },
+  "promise": {
+    "title": "Our promise",
+    "items": {
+      "ownership": {
+        "title": "100% ownership",
+        "description": "The website is yours. All code, all content, everything."
+      },
+      "response": {
+        "title": "24-hour response time",
+        "description": "On business days we respond to your questions within 24 hours."
+      },
+      "simple": {
+        "title": "No complex jargon",
+        "description": "We speak in plain language, no technical mumbo jumbo."
+      }
+    }
+  },
+  "footer": {
+    "cta": "Ready to get started?",
+    "ctaButton": "Start Intake",
+    "copyright": "© {year} Bureau Zwartjes. All rights reserved.",
+    "links": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact"
+    }
+  },
+  "chat": {
+    "title": "Start your intake",
+    "placeholder": "Type your answer...",
+    "send": "Send",
+    "close": "Close",
+    "typing": "Bureau Zwartjes is thinking...",
+    "welcome": "Hello! I'm the virtual assistant of Bureau Zwartjes. I'm here to help you create a plan for your new website. Let's begin: what is the name of your business?",
+    "complete": {
+      "title": "Thank you!",
+      "description": "We have received all the information. You will receive a personal proposal at your email address within 24 hours.",
+      "cta": "Close window"
+    }
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "toggle": "Toggle theme"
+  },
+  "language": {
+    "switch": "Switch language",
+    "nl": "Nederlands",
+    "en": "English"
+  }
+}
