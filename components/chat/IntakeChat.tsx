@@ -20,9 +20,9 @@ function parseMessageContent(content: string): {
   text: string;
   options: string[] | null;
 } {
-  const optionsMatch = content.match(/\[OPTIONS\](.*?)\[\/OPTIONS\]/s);
+  const optionsMatch = content.match(/\[OPTIONS\]([\s\S]*?)\[\/OPTIONS\]/);
   if (optionsMatch) {
-    const text = content.replace(/\[OPTIONS\].*?\[\/OPTIONS\]/s, "").trim();
+    const text = content.replace(/\[OPTIONS\][\s\S]*?\[\/OPTIONS\]/, "").trim();
     const options = optionsMatch[1]
       .split("|")
       .map((o) => o.trim())
@@ -35,7 +35,7 @@ function parseMessageContent(content: string): {
 // Clean message content for display (remove special tags)
 function cleanContent(content: string): string {
   return content
-    .replace(/\[OPTIONS\].*?\[\/OPTIONS\]/gs, "")
+    .replace(/\[OPTIONS\][\s\S]*?\[\/OPTIONS\]/g, "")
     .replace(/\[INTAKE_COMPLETE\][\s\S]*/g, "")
     .trim();
 }
