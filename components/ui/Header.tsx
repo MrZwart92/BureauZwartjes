@@ -21,7 +21,7 @@ export function Header() {
             {/* Logo */}
             <a href="#" className="flex items-center gap-2 group">
               <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-white font-bold text-sm">SZ</span>
+                <span className="text-white font-bold text-sm">TO</span>
               </div>
               <span className="text-lg font-bold text-foreground tracking-tight group-hover:text-accent transition-colors duration-200">
                 {t("logo")}

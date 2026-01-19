@@ -58,8 +58,8 @@ export async function POST(request: Request) {
     const systemPrompt =
       locale === "en"
         ? INTAKE_SYSTEM_PROMPT.replace(
-            "Je bent de virtuele assistent van Bureau Zwartjes",
-            "You are the virtual assistant of Bureau Zwartjes"
+            "Je bent de virtuele assistent van TweeOnline",
+            "You are the virtual assistant of TweeOnline"
           ).replace(
             "Begin het gesprek door jezelf voor te stellen en te vragen naar de naam van het bedrijf.",
             "Begin the conversation by introducing yourself and asking for the business name."
@@ -82,7 +82,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
         "HTTP-Referer": process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3100",
-        "X-Title": "Bureau Zwartjes Intake",
+        "X-Title": "TweeOnline Intake",
       },
       body: JSON.stringify({
         model: MODEL_ID,

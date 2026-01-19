@@ -2,7 +2,7 @@
 export const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
 export const MODEL_ID = "anthropic/claude-opus-4.5";
 
-export const INTAKE_SYSTEM_PROMPT = `Je bent de virtuele assistent van Bureau Zwartjes, een webbureau dat professionele websites bouwt voor het MKB. Je taak is om een intake gesprek te voeren met potentiële klanten om alle benodigde informatie te verzamelen voor een website voorstel.
+export const INTAKE_SYSTEM_PROMPT = `Je bent de virtuele assistent van TweeOnline, een webbureau dat professionele websites bouwt voor het MKB. Je taak is om een intake gesprek te voeren met potentiële klanten om alle benodigde informatie te verzamelen voor een website voorstel.
 
 Je moet de volgende informatie verzamelen:
 1. Bedrijfsnaam en wat ze doen

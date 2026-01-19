@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "title": "Bureau Zwartjes | Professional Websites for SME",
+    "title": "TweeOnline | Professional Websites for Small Business",
     "description": "No hassle, just results. Professional websites for entrepreneurs who want to grow. €1499 one-time + €49/month."
   },
   "header": {
-    "logo": "Bureau Zwartjes",
+    "logo": "TweeOnline",
     "login": "Login"
   },
   "hero": {
@@ -113,7 +113,7 @@
   "footer": {
     "cta": "Ready to get started?",
     "ctaButton": "Start Intake",
-    "copyright": "© {year} Bureau Zwartjes. All rights reserved.",
+    "copyright": "© {year} TweeOnline. All rights reserved.",
     "links": {
       "privacy": "Privacy",
       "terms": "Terms",
@@ -125,8 +125,8 @@
     "placeholder": "Type your answer...",
     "send": "Send",
     "close": "Close",
-    "typing": "Bureau Zwartjes is thinking...",
-    "welcome": "Hello! I'm the virtual assistant of Bureau Zwartjes. I'm here to help you create a plan for your new website. Let's begin: what is the name of your business?",
+    "typing": "TweeOnline is thinking...",
+    "welcome": "Hello! I'm the virtual assistant of TweeOnline. I'm here to help you create a plan for your new website. Let's begin: what is the name of your business?",
     "complete": {
       "title": "Thank you!",
       "description": "We have received all the information. You will receive a personal proposal at your email address within 24 hours.",

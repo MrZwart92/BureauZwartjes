@@ -69,7 +69,7 @@ export function Footer({ onStartIntake }: FooterProps) {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="w-6 h-6 rounded-md bg-accent flex items-center justify-center">
-                <span className="text-white font-bold text-xs">SZ</span>
+                <span className="text-white font-bold text-xs">TO</span>
               </div>
               <p className="text-sm text-muted">
                 {t("copyright", { year: currentYear })}
