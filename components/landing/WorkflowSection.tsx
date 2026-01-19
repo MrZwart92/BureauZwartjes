@@ -206,13 +206,6 @@ export function WorkflowSection() {
                   </motion.div>
                 </div>
 
-                {/* Mobile step indicator */}
-                <div className="md:hidden flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-secondary text-white flex items-center justify-center font-bold shadow-lg shadow-accent/20">
-                    {index + 1}
-                  </div>
-                  <div className="h-px flex-1 bg-gradient-to-r from-accent/50 to-transparent" />
-                </div>
 
                 {/* Empty space for alternating layout */}
                 <div className="hidden md:block flex-1" />
