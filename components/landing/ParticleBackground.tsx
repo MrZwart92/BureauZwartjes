@@ -34,12 +34,16 @@ export function ParticleBackground() {
         value: "transparent",
       },
     },
-    fpsLimit: 60,
+    fpsLimit: 120,
     interactivity: {
       events: {
         onHover: {
           enable: true,
-          mode: "grab",
+          mode: ["grab", "bubble"],
+        },
+        onClick: {
+          enable: true,
+          mode: "push",
         },
         resize: {
           enable: true,
@@ -47,23 +51,45 @@ export function ParticleBackground() {
       },
       modes: {
         grab: {
-          distance: 140,
+          distance: 180,
           links: {
-            opacity: 0.5,
+            opacity: 0.6,
+            color: isDark ? "#ff6b3d" : "#ff5f2e",
           },
+        },
+        bubble: {
+          distance: 200,
+          size: 6,
+          duration: 0.3,
+          opacity: 0.8,
+        },
+        push: {
+          quantity: 3,
+        },
+        repulse: {
+          distance: 150,
+          duration: 0.4,
         },
       },
     },
     particles: {
       color: {
-        value: isDark ? "#ff6b35" : "#ff6b35",
+        value: [
+          isDark ? "#ff6b3d" : "#ff5f2e", // accent
+          isDark ? "#fbbf24" : "#f59e0b", // secondary
+          isDark ? "#ff9f6a" : "#ff8f4c", // accent light
+        ],
       },
       links: {
-        color: isDark ? "#ffffff" : "#0a0a0a",
-        distance: 150,
+        color: isDark ? "#ffffff" : "#1a1613",
+        distance: 140,
         enable: true,
-        opacity: isDark ? 0.1 : 0.08,
+        opacity: isDark ? 0.12 : 0.08,
         width: 1,
+        triangles: {
+          enable: true,
+          opacity: isDark ? 0.02 : 0.01,
+        },
       },
       move: {
         direction: "none",
@@ -71,8 +97,8 @@ export function ParticleBackground() {
         outModes: {
           default: "bounce",
         },
-        random: false,
-        speed: 1,
+        random: true,
+        speed: 0.8,
         straight: false,
       },
       number: {
@@ -81,16 +107,26 @@ export function ParticleBackground() {
           width: 1920,
           height: 1080,
         },
-        value: 80,
+        value: 100,
       },
       opacity: {
-        value: isDark ? 0.3 : 0.4,
+        value: { min: 0.2, max: 0.6 },
+        animation: {
+          enable: true,
+          speed: 0.5,
+          sync: false,
+        },
       },
       shape: {
         type: "circle",
       },
       size: {
-        value: { min: 1, max: 3 },
+        value: { min: 1, max: 4 },
+        animation: {
+          enable: true,
+          speed: 2,
+          sync: false,
+        },
       },
     },
     detectRetina: true,
@@ -101,7 +137,7 @@ export function ParticleBackground() {
       id="tsparticles"
       particlesLoaded={particlesLoaded}
       options={options}
-      className="absolute inset-0 -z-10"
+      className="absolute inset-0 z-0"
     />
   );
 }

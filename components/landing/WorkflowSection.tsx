@@ -97,67 +97,118 @@ export function WorkflowSection() {
   const t = useTranslations("workflow");
 
   return (
-    <section className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-28 bg-background relative overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-surface/50 via-transparent to-surface/50 pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-20"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: 60 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="accent-line mx-auto mb-6"
+          />
+          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-5 tracking-tight">
             {t("title")}
           </h2>
-          <p className="text-lg text-foreground/70">{t("subtitle")}</p>
+          <p className="text-lg text-muted max-w-xl mx-auto">{t("subtitle")}</p>
         </motion.div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2" />
+          {/* Timeline line - animated gradient */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2">
+            <motion.div
+              initial={{ height: 0 }}
+              whileInView={{ height: "100%" }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              className="w-full bg-gradient-to-b from-accent via-secondary to-accent"
+            />
+          </div>
 
-          <div className="space-y-12 md:space-y-0">
+          <div className="space-y-8 md:space-y-0">
             {stepKeys.map((key, index) => (
               <motion.div
                 key={key}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 className={`relative flex items-center md:gap-8 ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                {/* Content */}
+                {/* Content Card */}
                 <div
                   className={`flex-1 ${
-                    index % 2 === 0 ? "md:text-right" : "md:text-left"
+                    index % 2 === 0 ? "md:text-right md:pr-16" : "md:text-left md:pl-16"
                   }`}
                 >
-                  <div
-                    className={`inline-block p-6 rounded-2xl bg-surface border border-border ${
-                      index % 2 === 0 ? "md:mr-8" : "md:ml-8"
-                    }`}
+                  <motion.div
+                    whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                    className={`group inline-block p-6 lg:p-8 rounded-2xl bg-surface border border-border hover:border-accent/30 transition-all duration-300 relative overflow-hidden`}
                   >
-                    <h3 className="text-xl font-semibold text-foreground mb-2">
+                    {/* Hover glow effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                    {/* Step number badge */}
+                    <div className={`inline-flex items-center gap-2 mb-4 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+                      <span className="text-sm font-bold text-accent">
+                        0{index + 1}
+                      </span>
+                      <div className="w-8 h-px bg-gradient-to-r from-accent to-secondary" />
+                    </div>
+
+                    {/* Icon */}
+                    <div className="icon-glow w-12 h-12 rounded-xl text-accent flex items-center justify-center mb-4 group-hover:text-white">
+                      {stepIcons[key]}
+                    </div>
+
+                    <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-3 tracking-tight relative">
                       {t(`steps.${key}.title`)}
                     </h3>
-                    <p className="text-foreground/70">
+                    <p className="text-muted leading-relaxed relative">
                       {t(`steps.${key}.description`)}
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
 
-                {/* Number circle */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-accent text-white items-center justify-center font-bold z-10">
-                  {index + 1}
+                {/* Center circle with icon */}
+                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 z-10">
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
+                    className="relative"
+                  >
+                    {/* Outer glow ring */}
+                    <div className="absolute inset-0 w-16 h-16 rounded-full bg-accent/20 blur-md" />
+                    {/* Main circle */}
+                    <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-accent/30">
+                      {index + 1}
+                    </div>
+                  </motion.div>
                 </div>
 
-                {/* Icon (mobile) */}
+                {/* Mobile step indicator */}
                 <div className="md:hidden flex items-center gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-bold">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-secondary text-white flex items-center justify-center font-bold shadow-lg shadow-accent/20">
                     {index + 1}
                   </div>
+                  <div className="h-px flex-1 bg-gradient-to-r from-accent/50 to-transparent" />
                 </div>
 
                 {/* Empty space for alternating layout */}
@@ -165,6 +216,15 @@ export function WorkflowSection() {
               </motion.div>
             ))}
           </div>
+
+          {/* End marker */}
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.6 }}
+            className="hidden md:flex absolute left-1/2 -translate-x-1/2 -bottom-4 w-4 h-4 rounded-full bg-accent shadow-lg shadow-accent/50"
+          />
         </div>
       </div>
     </section>

@@ -11,7 +11,7 @@ const icons = {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-8 h-8"
+      className="w-7 h-7"
     >
       <path
         strokeLinecap="round"
@@ -27,7 +27,7 @@ const icons = {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-8 h-8"
+      className="w-7 h-7"
     >
       <path
         strokeLinecap="round"
@@ -43,7 +43,7 @@ const icons = {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-8 h-8"
+      className="w-7 h-7"
     >
       <path
         strokeLinecap="round"
@@ -60,38 +60,68 @@ export function USPSection() {
   const t = useTranslations("usps");
 
   return (
-    <section className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-28 bg-background relative">
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-20"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: 60 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="accent-line mx-auto mb-6"
+          />
+          <h2 className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight">
             {t("title")}
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {uspKeys.map((key, index) => (
             <motion.div
               key={key}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              whileHover={{ y: -8, transition: { duration: 0.2 } }}
-              className="group p-8 rounded-2xl bg-surface border border-border hover:border-accent transition-colors"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.12,
+                ease: [0.22, 1, 0.36, 1]
+              }}
+              whileHover={{
+                y: -8,
+                transition: { duration: 0.25, ease: "easeOut" }
+              }}
+              className="group card-elevated p-8 lg:p-10"
             >
-              <div className="w-14 h-14 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
+              {/* Icon with glow effect */}
+              <div className="icon-glow w-14 h-14 rounded-xl text-accent flex items-center justify-center mb-6 group-hover:text-white">
                 {icons[key]}
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+
+              <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-4 tracking-tight">
                 {t(`items.${key}.title`)}
               </h3>
-              <p className="text-foreground/70">{t(`items.${key}.description`)}</p>
+
+              <p className="text-muted leading-relaxed">
+                {t(`items.${key}.description`)}
+              </p>
+
+              {/* Bottom accent line on hover */}
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileHover={{ scaleX: 1 }}
+                transition={{ duration: 0.3 }}
+                className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent via-secondary to-accent origin-left"
+              />
             </motion.div>
           ))}
         </div>
