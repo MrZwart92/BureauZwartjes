@@ -153,7 +153,7 @@ export function WorkflowSection() {
                 {/* Content Card */}
                 <div
                   className={`flex-1 ${
-                    index % 2 === 0 ? "md:text-right md:pr-16" : "md:text-left md:pl-16"
+                    index % 2 === 0 ? "md:text-right md:pr-24" : "md:text-left md:pl-24"
                   }`}
                 >
                   <motion.div
@@ -163,19 +163,19 @@ export function WorkflowSection() {
                     {/* Hover glow effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                    {/* Top row: Icon + Step number badge */}
-                    <div className={`flex items-center gap-4 mb-5 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
-                      {/* Icon */}
-                      <div className="icon-glow w-12 h-12 rounded-xl text-accent flex items-center justify-center group-hover:text-white flex-shrink-0">
-                        {stepIcons[key]}
-                      </div>
-
+                    {/* Top row: Badge on one side, Icon on the other */}
+                    <div className={`flex items-center justify-between gap-4 mb-5 ${index % 2 === 0 ? "" : "md:flex-row-reverse"}`}>
                       {/* Step number badge */}
-                      <div className={`flex items-center gap-2 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+                      <div className={`flex items-center gap-2 ${index % 2 === 0 ? "" : "md:flex-row-reverse"}`}>
                         <span className="text-sm font-bold text-accent">
                           0{index + 1}
                         </span>
                         <div className="w-8 h-px bg-gradient-to-r from-accent to-secondary" />
+                      </div>
+
+                      {/* Icon */}
+                      <div className="icon-glow w-12 h-12 rounded-xl text-accent flex items-center justify-center group-hover:text-white flex-shrink-0">
+                        {stepIcons[key]}
                       </div>
                     </div>
 
